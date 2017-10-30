@@ -36,7 +36,7 @@ public class ChamadoController {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/")
     public Chamado getChamdo(@PathParam("id") Long id) {
-        Chamado c1 = new Chamado("Chamado1", "Mensagem1", Status.NOVO);
+         Chamado c1 = new Chamado("Chamado1", "Mensagem1", Status.NOVO);
         return c1;
     }
     
