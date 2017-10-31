@@ -31,16 +31,18 @@
                         <th>ID</th>
                         <th>Assunto</th>
                         <th>Mensagem</th>
+                        <th>status</th>
                         <th>Opções</th>
                     </tr>
                     <tr  ng-repeat="chamdo.in.controller.chamados">
                         <td>{{chamado.id}}</td>
                         <td>{{chamado.assunto}}</td>
+                        <td>{{chamado.status}}</td>
                         <td>{{chamado.mensagem}}</td>
                         <td>
                             <button type="button" ng-click="controller.alterar(chamado)">Alterar</button>
                             <button type="button" ng-click="controller.deletar(chamado)">Deletar</button>
-                            <button type="button" ng-click="controller.concluir(chamado)">Concluir</button>
+                            <button type="button" ng-show="chamado.status !== 'FECHADO'" ng-click="controller.concluir(chamado)">Concluir</button>
                         </td>
                     </tr>
                 </table>

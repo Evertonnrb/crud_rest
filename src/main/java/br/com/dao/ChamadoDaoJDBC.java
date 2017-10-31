@@ -56,12 +56,12 @@ public class ChamadoDaoJDBC {
         return linasAlteradas;
     }
 
-    public int excluir(Chamado chamado) throws SQLException, ClassNotFoundException {
+    public int excluir(Long id) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM chamado WHERE id = ?";
         int linhasAfetadas = 0;
         try {
             PreparedStatement pst = this.conexao.getConnection().prepareStatement(sql);
-            pst.setLong(1, chamado.getId());
+            pst.setLong(1, id);
             linhasAfetadas = pst.executeUpdate();
             this.conexao.commit();
         } catch (SQLException e) {

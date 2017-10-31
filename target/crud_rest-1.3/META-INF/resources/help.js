@@ -52,7 +52,14 @@ angular.module("HelpApp",[]);
             };
             
             self.concluir = function(){
-                alert("TODO");
+                 $http({
+                    method: 'PUT',
+                    url: urlBase+'chamados/'+self.chamado.id+"/"
+                }) .then (function successCallBack(response){
+                    self.atualizarTabela();
+                },function errorCallBack(response){
+                   self.ocorreuErro(); 
+                });
             };
             
             self.ocorreuErro = function (){
