@@ -1,7 +1,7 @@
 package br.com.controller;
 
 import br.com.bean.Chamado;
-import br.com.bean.Status;
+import br.com.enumerado.Status;
 import br.com.dao.ChamadoDaoJDBC;
 import java.sql.SQLException;
 import java.util.List;

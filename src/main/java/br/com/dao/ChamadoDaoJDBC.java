@@ -1,7 +1,7 @@
 package br.com.dao;
 
 import br.com.bean.Chamado;
-import br.com.bean.Status;
+import br.com.enumerado.Status;
 import br.com.infra.ConexaoJDBC;
 import br.com.infra.ConexaoPostGresJDBC;
 import java.sql.PreparedStatement;

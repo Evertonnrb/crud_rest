@@ -1,7 +1,7 @@
 package br.com.controller;
 
 import br.com.bean.Chamado;
-import br.com.bean.Status;
+import br.com.enumerado.Status;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.Consumes;
@@ -22,13 +22,13 @@ public class ChamadoController {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/")
     public List<Chamado> listChamados() {
-        Chamado chamado1 = new Chamado("Chamado1", "Mensagem1", Status.NOVO);
-        Chamado chamado2 = new Chamado("Chamado2", "Mensagem2", Status.PENDENTE);
-        Chamado chamado3 = new Chamado("Chamado3", "Mensagem3", Status.FECHADO);
+//        Chamado chamado1 = new Chamado("Chamado1", "Mensagem1", Status.NOVO);
+//        Chamado chamado2 = new Chamado("Chamado2", "Mensagem2", Status.PENDENTE);
+//        Chamado chamado3 = new Chamado("Chamado3", "Mensagem3", Status.FECHADO);
         List<Chamado> chamados = new ArrayList<>();
-        chamados.add(chamado1);
-        chamados.add(chamado2);
-        chamados.add(chamado3);
+//        chamados.add(chamado1);
+//        chamados.add(chamado2);
+//        chamados.add(chamado3);
         return chamados;
     }
 
@@ -36,7 +36,7 @@ public class ChamadoController {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/")
     public Chamado getChamdo(@PathParam("id") Long id) {
-         Chamado c1 = new Chamado("Chamado1", "Mensagem1", Status.NOVO);
+         Chamado c1 = new Chamado();
         return c1;
     }
     
